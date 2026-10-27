@@ -62,7 +62,7 @@ if('IntersectionObserver' in window){const navObserver=new IntersectionObserver(
 loadState();loadQuickEntries();render();
 const initialCollapseKey=document.body.classList.contains('sidebar-collapsed')?'expandSidebar':'collapseSidebar';document.querySelector('#sideCollapse span').textContent=tx(initialCollapseKey);document.querySelector('#sideCollapse').setAttribute('aria-label',tx(initialCollapseKey));document.querySelector('#menuToggle').setAttribute('aria-label',tx('openNavigation'));window.addEventListener('resize',()=>{if(window.innerWidth<=900)document.body.classList.remove('sidebar-collapsed')});
 
-const PB_CLOUD_CONFIG={url:'',anonKey:''};
+const PB_CLOUD_CONFIG={url:'https://tcamymhokandglzndrqi.supabase.co',anonKey:'sb_publishable_n5bCvz6P6KAr3IjgFALZnQ_vee5Ho4q'};
 let pbSession=null,pbSyncTimer=null,pbEditing=false,pbCopyOriginal=null,pbProfileOwnerId=null;
 const PB_CONFIG_KEY='celia-personal-bank-supabase-config-v1',PB_SESSION_KEY='celia-personal-bank-session-v1';
 function pbConfig(){try{return JSON.parse(localStorage.getItem(PB_CONFIG_KEY)||'null')||PB_CLOUD_CONFIG}catch(e){return PB_CLOUD_CONFIG}}
